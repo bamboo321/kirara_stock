@@ -13,6 +13,7 @@ class stock:
     def __init__(self) -> None:
         self.soup = None
         self.goods = []
+        self.updated_time = None
 
         self.update()
         
