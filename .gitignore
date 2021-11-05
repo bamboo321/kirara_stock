@@ -213,3 +213,6 @@ tags
 
 # Local History for Visual Studio Code
 .history/
+
+
+data/*
