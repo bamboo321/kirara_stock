@@ -17,11 +17,12 @@ class stock:
         self.update()
         
 
-    def update(self):
+    def update(self) -> None:
         self.soup = self._init_soup()
 
         self.goods = list(self._fetch_table())
         self.updated_time = datetime.strptime(self._fetch_updated_time(), '%Y年%m月%d日 %H:%M')
+
 
     def _fetch_table(self) -> iter:
         goods_table = self.soup.find('table', class_='goods_list').find('tbody')
@@ -34,6 +35,7 @@ class stock:
                 yield striped_row
         
         return row_iter(goods_rows)
+
 
     @classmethod
     def _init_soup(cls) -> BeautifulSoup:
