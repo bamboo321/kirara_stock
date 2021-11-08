@@ -53,10 +53,3 @@ class stock:
         
         # xxxx年xx月xx日 xx:xx
         return date_str.group()
-
-
-        
-
-class _goods_status:
-    def __init__(self) -> None:
-        pass 
