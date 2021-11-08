@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 class stock:
     # HACK: クラス変数使うべきか?
     url = 'http://www.kiraraten.jp/goods_list.html'
+    header = ('商品番号', '商品カテゴリ', '商品名', '購入限定数', '在庫状況')
 
 
     def __init__(self) -> None:
