@@ -1,11 +1,16 @@
 import csv
 
 import stock
+import writer
 
 
 def main():
     s = stock.stock()
-    output_csv(s)
+    # output_csv(s)
+
+    # w = writer.create_writer('csv')
+    w = writer.csv_writer(s)
+    w.write()
 
 
 def output_csv(stock) -> None:
