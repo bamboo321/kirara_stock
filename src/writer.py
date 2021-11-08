@@ -2,14 +2,12 @@ import csv
 from stock import stock
 
 
-# FIXME: stockクラスを引数にとるようにする?
-def create_writer(writertype: str = "csv") -> object:
-    type = {
-        'csv': csv_writer,
-        # 'influxdb': influxdbwriter,
-    }
+class create_writer:
+    def __init__(self, stock: stock) -> None:
+        self.stock = stock
 
-    return type[writertype](stock)
+    def create(self, writer_type: object) -> object:
+        return writer_type(self.stock)
 
 
 class csv_writer:
