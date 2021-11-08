@@ -16,7 +16,7 @@ class csv_writer:
         self.dict = '../data/'
         self.filename = stock.updated_time.strftime('%Y%m%d_%H:%M:%S') + '.csv'
 
-    def write(self):
+    def write(self) -> None:
         with open(self.dict + self.filename, 'w') as f:
             writer = csv.writer(f)
             writer.writerow(self.stock.header)
